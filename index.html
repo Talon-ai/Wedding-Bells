@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Bells – Bridal Boutique & Wedding Services in Witbank</title>
+    <meta name="description" content="Wedding Bells offers bridal gowns, custom fittings, men’s suits, accessories & wedding services in Witbank to make your big day unforgettable.">
+    <meta name="keywords" content="Bridal Boutique Witbank, Wedding Dresses South Africa, Men's Suit Hire, Wedding Bells Couture, eMalahleni Weddings">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #C5A059;
+            --soft-cream: #F9F7F2;
+            --dark-charcoal: #333333;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-charcoal);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1549333321-22f83d9f1584?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        .btn {
+            background: var(--primary-gold);
+            color: var(--white);
+            padding: 15px 35px;
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: #b08d4a;
+            transform: translateY(-2px);
+        }
+
+        /* --- Services Grid (Inspired by Bakery Layout) --- */
+        .section-padding {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title .divider {
+            width: 80px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            transition: var(--transition);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            padding: 0 15px;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 8px 20px;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-gold);
+            color: var(--white);
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: var(--soft-cream);
+            padding: 80px 10%;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* --- Contact Form --- */
+        .contact-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-right: 15px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #222;
+            color: #ccc;
+            padding: 50px 10% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav ul { margin-top: 20px; }
+            nav ul li { margin: 0 10px; }
+            .hero h1 { font-size: 2.5rem; }
+            .about-container, .contact-flex { grid-template-columns: 1fr; flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WEDDING BELLS</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Your Dream Wedding Starts Here</h1>
+        <p>Elegant Bridal Couture, Custom Fittings, and Expert Styling since 2006. Based in the heart of Witbank.</p>
+        <a href="#contact" class="btn">Book a Consultation</a>
+    </section>
+
+    <section class="about-container" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1594462250620-2933610333d9?auto=format&fit=crop&q=80&w=800" alt="Inside Wedding Bells Boutique">
+        </div>
+        <div class="about-text">
+            <h2>Elegance & Excellence</h2>
+            <p>For nearly two decades, Wedding Bells has been the premier destination for brides in Mpumalanga. We specialize in turning your vision into a reality with a curated collection of international designs and bespoke tailoring.</p>
+            <p style="margin-top: 20px;">Whether you are looking for a classic ballgown or a modern silhouette, our expert consultants provide a personalized experience that honors your unique style.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" id="services">
+        <div class="section-title">
+            <h2>Our Collections</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1546193430-c2d207739ed7?auto=format&fit=crop&q=80&w=600" alt="Bridal Gowns" class="product-image">
+                <h3>Bridal Gowns</h3>
+                <p>Custom-made masterpieces and ready-to-wear designs from world-renowned labels.</p>
+                <a href="#contact" class="btn-outline">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=600" alt="Bridesmaid Dresses" class="product-image">
+                <h3>Evening Wear</h3>
+                <p>Elegant bridesmaid dresses and evening gowns for mothers of the bride and guests.</p>
+                <a href="#contact" class="btn-outline">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1594932224828-b4b059b8fe0e?auto=format&fit=crop&q=80&w=600" alt="Men's Suits" class="product-image">
+                <h3>Suit Hire & Retail</h3>
+                <p>Sophisticated tuxedos and tailored suits for the groom and his groomsmen.</p>
+                <a href="#contact" class="btn-outline">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?auto=format&fit=crop&q=80&w=600" alt="Bridal Accessories" class="product-image">
+                <h3>Accessories</h3>
+                <p>The perfect finishing touches: veils, jewelry, shoes, and hairpieces.</p>
+                <a href="#contact" class="btn-outline">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--soft-cream);">
+        <div class="section-title">
+            <h2>What Our Brides Say</h2>
+            <div class="divider"></div>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; font-style: italic;">
+            <p>"Wedding Bells made my dress shopping experience stress-free. The fitting was perfect, and I felt like a queen on my big day. Absolutely worth the drive!"</p>
+            <p style="margin-top: 15px; font-weight: 700; color: var(--primary-gold);">— Sarah M., Witbank</p>
+        </div>
+    </section>
+
+    <section class="section-padding" id="contact">
+        <div class="contact-flex">
+            <div>
+                <h2>Get In Touch</h2>
+                <p style="margin-bottom: 30px;">Book your private fitting or inquire about our collections.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>X4, 671 Gordon Rd, Die Heuwel, eMalahleni, Mpumalanga</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>082 893 4600</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>weddingbells@vodamail.co.za</span>
+                </div>
+            </div>
+            <div>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Phone Number">
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--white); margin-bottom: 15px;">Wedding Bells</h3>
+                <p>Providing bridal excellence in South Africa for over 15 years.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 15px;">Hours</h4>
+                <p>Mon - Fri: 09:00 - 17:00</p>
+                <p>Sat: 09:00 - 13:00</p>
+                <p>Sun: Closed</p>
+            </div>
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 15px;">Follow Us</h4>
+                <div style="font-size: 1.5rem;">
+                    <i class="fab fa-facebook" style="margin-right: 15px; cursor: pointer;"></i>
+                    <i class="fab fa-instagram" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Wedding Bells Couture. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
